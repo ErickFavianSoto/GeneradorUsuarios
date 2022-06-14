@@ -8,17 +8,39 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/681/681392.png">
 </head>
-<body>
-    <div id="app">
-        <img  v-bind:src="foto" alt="FotoPerfil" :class="genero">
-        <h1>{{nombre}} {{apellido}}</h1>
-        <h3>Email: {{email}}</h3>
-        <button v-on:click="cambiarUsuario()" :class="genero">Nuevo usuario</button>
+<body style="background-image: url('resources/background1.jpg');">
+    <div id="app" class="app">
+        <img  v-bind:src="foto" alt="FotoPerfil" :class="genero" id="fotoUsuario">
+        <h1 class="textUser">{{nombre}} {{apellido}}</h1>
+        <table>
+            <tr><td>
+                <button class="btnTexto" onclick="ElegirCorreo()" id="btncorreo"><img src="resources/correos-electronicos.png" class="imgs"></button></td>
+            <td>
+                <button class="btnTexto" onclick="ElegirTelefono()" id="btntelefono"><img src="resources/telephone.png" class="imgs"></button>
+            </td><td>
+                <button class="btnTexto" onclick="ElegirDireccion()" id="btndirec"><img src="resources/adress.png" class="imgs"></button>
+            </td><td>
+                <button class="btnTexto" onclick="ElegirEdad()" id="btnedad"><img src="resources/birthday.png" class="imgs"></button>
+            </td><td>
+                <button class="btnTexto" onclick="ElegirContraseña()" id="btncontra"><img src="resources/password.png" class="imgs"></button>
+            </td></tr>
+        </table>
+        <h3 class="text"  id="correo">Email: <a class="correo1">{{email}}</a></h3>
+        <h3 class="text" style="display:none;" id="telefono">Phone: {{telefono}}</h3>
+        <h3 class="text" style="display:none;" id="direccion">Location: {{location}}</h3>
+        <h3 class="text" style="display:none;" id="edad">Age: {{edad}} years</h3>        
+        <h3 class="text" style="display:none;" id="contraseña">Password: {{password}}</h3
+            
+            
+        </table>
+        
+        <button v-on:click="cambiarUsuario()" :class="genero" id="button">Generar Nuevo usuario</button>
     </div>
 
 
     <script src="https://unpkg.com/vue@3"></script>
     <script src="app.js"></script>
+    <script src="datos.js"></script>
 
 </body>
 </html>

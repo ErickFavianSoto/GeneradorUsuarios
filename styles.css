@@ -7,25 +7,51 @@
   html,
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(43, 41, 41);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  .text{
+    color: black;
+  }
+  .textUser{
+    color: black;
+  }
+  
+  .btnTexto{
+    background: none;
+  }
+  .btnTexto :hover{
+    border-color: #d9dd01;
+   border-width: 1px;
   }
   
   #app {
-    width: 400px;
-    height: 100vh;
+    width: 50%;
+    height: 70%;
+    left: 25%;
+    bottom: 20%;
     margin: auto;
     text-align: center;
     display: flex;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    background-color: #fff;
+  }  
   
   h1,
   h3 {
     margin-bottom: 1rem;
     font-weight: normal;
     color: white;
+  }
+  .imgs{
+    width: 50px;
+    margin-bottom: 0%;
+    border: 0px #fff solid;
+    border-radius: 10px;
   }
   
   img {
@@ -61,5 +87,78 @@
   
   button:hover {
     transform: scale(0.98);
+  }
+
+  @media only screen and (max-width: 960px) {
+
+html,
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: 500%;
+  }
+  #app {
+    width: 70%;
+    height: 100%;
+    left: 15%;
+    bottom: 0%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  #fotoUsuario{
+    position: fixed;
+    top: 5%
+  }
+  .textUser{
+    color: black;
+    position: absolute;
+    top: 30%;
+  }
+  
+  .correo1 {
+    font-size: 65%;
+}
+  
+  .text {
+    position: absolute;
+    bottom: 20%;
+}
+  #button{
+    position: absolute;
+    bottom: 5%;
+  }
+
+  #btncorreo{
+    position: fixed;
+    left: 15%;
+    top: 40%;
+  }
+  #btntelefono{
+    position: fixed;
+    left: 50%;
+    top: 40%;
+  }
+  #btndirec{
+    position: fixed;
+    left: 15%;
+    top: 50%;
+  }
+  #btnedad{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+  }
+  #btncontra{
+    position: fixed;
+    left: 35%;
+    top: 60%;
+  }
+
   }
   
